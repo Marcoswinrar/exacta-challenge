@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente <Layout/> Deve renderizar o componente sem problemas 1`] = `
+<div>
+  <main
+    class="sc-gKXOVf"
+  >
+    <header
+      class="sc-bczRLJ"
+    >
+      <div
+        class="sc-gsnTZi ckOlZT"
+      >
+        <h1
+          alt="Logo da app"
+          class="sc-dkzDqf sc-hKMtZM hMrZdk efARqR"
+        >
+          exactaworks
+        </h1>
+      </div>
+      <div
+        class="sc-gsnTZi ghVIFq"
+      >
+        <h1
+          alt="Titulo da app"
+          class="sc-dkzDqf sc-eCYdqJ hMrZdk ewrqrw"
+        >
+          cadastro de usuários
+        </h1>
+      </div>
+    </header>
+    <nav
+      class="sc-jSMfEi kWPOOP"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        Cadastro
+      </a>
+      <a
+        class=""
+        href="/users"
+      >
+        Usuários
+      </a>
+    </nav>
+    <div>
+      Children component
+    </div>
+  </main>
+</div>
+`;
