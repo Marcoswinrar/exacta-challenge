@@ -1,12 +1,12 @@
 import Button from '../Button'
 import * as S from './styled'
 
-const UserButtonGender = () => {
+const UserButtonGender = ({ handleClick }) => {
   return (
-      <S.UserButtonGenderWrapper>
-        <Button value={"Masculino"} />
-        <Button value={"Feminino"} />
-      </S.UserButtonGenderWrapper>
+    <S.UserButtonGenderWrapper>
+      <Button value={"Masculino"} onClick={() => handleClick("M")} />
+      <Button value={"Feminino"} onClick={() => handleClick("F")} />
+    </S.UserButtonGenderWrapper>
   )
 }
 
