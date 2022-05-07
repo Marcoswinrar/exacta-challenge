@@ -8,7 +8,7 @@ import * as S from './styled'
 
 const UserForm = () => {
 
-  const [data, setData] = useState({
+  const [user, setUser] = useState({
     nome: '',
     rg: '',
     dataEmissao: '',
@@ -17,7 +17,7 @@ const UserForm = () => {
   })
 
   const changeFormData = (value, prop) =>
-    setData(prev => ({ ...prev, [prop]: value }))
+    setUser(prev => ({ ...prev, [prop]: value }))
 
   return (
     <S.UserFormWrapper>
