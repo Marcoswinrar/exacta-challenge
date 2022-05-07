@@ -1,16 +1,14 @@
+import InputMask from 'react-input-mask'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { UserFormFieldStyle } from '../../config/styles'
 
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-export const Input = styled.input`
-  width: 330px;
-  height: 30px;
-  background-color: #fffced;
-  border-color: black;
-
+export const Input = styled(InputMask)`
+  ${UserFormFieldStyle}
   ${media.lessThan("320px")`
     width: 250px;
   `}
