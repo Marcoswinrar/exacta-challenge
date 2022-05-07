@@ -18,6 +18,6 @@ describe("Componente <Layout/>", () => {
 
   it("Deve renderizar o children passado no layout", () => {
     renderComponent()
-    expect(screen.getByText(/Children component/)).toBeInTheDocument()
+    expect(screen.queryByText(/Children component/)).toBeInTheDocument()
   })
 })
