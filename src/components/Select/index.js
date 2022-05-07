@@ -3,7 +3,7 @@ import * as S from './styled'
 const Select = ({ data, onChange, label }) => (
   <S.SelectWrapper>
     <S.Label>{label}</S.Label>
-    <S.Select onChange={(e) => onChange(e.target.value)}>
+    <S.Select onChange={onChange}>
       {data && data.map((d, index) => (
         <S.Option
           key={index}
