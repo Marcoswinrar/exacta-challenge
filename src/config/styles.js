@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -15,5 +15,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
-  
+`
+
+export const UserFormFieldStyle = css`
+  width: 330px;
+  height: 30px;
+  background-color: #fffced;
+  border-color: black;
 `
