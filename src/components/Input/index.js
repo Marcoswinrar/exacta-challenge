@@ -1,6 +1,10 @@
+import { useState } from 'react'
 import * as S from './styled'
 
-const Input = ({ label, type, hasSeparator, onChange, value, mask }) => {
+const Input = (props) => {
+  const [focused, setFocused] = useState(false)
+  const { label, mask, hasSeparator, onChange, ...inputProps } = props
+  
   return (
     <>
       <S.InputWrapper>
@@ -8,11 +12,13 @@ const Input = ({ label, type, hasSeparator, onChange, value, mask }) => {
           {label}
         </S.Label>
         <S.Input
-          mask={mask}
+          {...inputProps}
           id={label}
-          type={type}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => onChange(e)}
+          mask={mask}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          focused={focused.toString()}
         />
       </S.InputWrapper>
       {hasSeparator && <S.Separator />}

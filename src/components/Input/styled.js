@@ -6,12 +6,23 @@ import { UserFormFieldStyle } from '../../config/styles'
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  
+  ${media.lessThan("large")`
+    width: 100%;
+  `}
 `
 export const Input = styled(InputMask)`
-  ${UserFormFieldStyle}
-  ${media.lessThan("320px")`
-    width: 250px;
-  `}
+  ${UserFormFieldStyle} 
+
+  :focus {
+    outline: none;
+    border-color: blue;
+  }
+
+  :invalid[focused="true"]{
+    border-color: red;
+  }
+
 `
 export const Label = styled.label`
   font-size: .8rem;
@@ -25,7 +36,7 @@ export const Separator = styled.span`
   background-color: black;
   margin: auto 3px 15px 3px;
 
-  ${media.lessThan("medium")`
+  ${media.lessThan("large")`
     height: 0;
   `}
 `

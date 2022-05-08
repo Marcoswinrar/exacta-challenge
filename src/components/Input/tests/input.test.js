@@ -18,19 +18,6 @@ describe("Componente <Input />", () => {
     expect(screen.queryByText(/Input/)).toBeInTheDocument()
   })
 
-  it("Deve renderizar o Input com máscara caso seja passado ao componente", () => {
-    render(
-      <Input
-        label="Input"
-        type="text"
-        value="Teste"
-        mask="123456-0"
-      />
-    )
-
-    expect(screen.getByDisplayValue(/123456-0/)).toBeInTheDocument()
-  })
-
   it("Deve chamar o onChange e  conter o valor correto ao digitar no campo de Input", () => {
     const onChange = jest.fn()
 
