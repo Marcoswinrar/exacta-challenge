@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const UserFormWrapper = styled.div`
+export const UserFormWrapper = styled.form`
 `
 export const UserFormInputContainer = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const UserFormInputContainer = styled.div`
   justify-content: center;
   margin-bottom: 1.2rem;
 
-  ${media.lessThan("medium")`
+  ${media.lessThan("large")`
     flex-direction: column;  
   `}
 `

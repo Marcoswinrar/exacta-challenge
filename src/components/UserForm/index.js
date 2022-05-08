@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Button from '../Button'
 import Input from '../Input'
 import Select from '../Select'
 import UserButtonGender from '../UserButtonGender'
+import { inputs } from './inputs'
 import { orgaoEmissorData } from '../../utils/mock'
 import * as S from './styled'
 
@@ -16,46 +17,41 @@ const UserForm = () => {
     sexo: ''
   })
 
-  const changeFormData = (value, prop) =>
-    setUser(prev => ({ ...prev, [prop]: value }))
+  const changeFormData = (e) =>
+    setUser(prev => ({ ...prev, [e.target.name]: e.target.value }))
+
+
+  const submitData = (e) => {
+    e.preventDefault()
+    console.log(user)
+  }
 
   return (
-    <S.UserFormWrapper>
+    <S.UserFormWrapper onSubmit={submitData}>
       <S.UserFormInputContainer>
-        <Input
-          type={"text"}
-          label={"Nome"}
-          hasSeparator
-          onChange={(value) => changeFormData(value, 'nome')}
-        />
-        <Input
-          type={"text"}
-          label={"Número do RG"}
-          mask={"99 999 999 - 9"}
-          onChange={(value) => changeFormData(value, 'rg')}
-        />
-      </S.UserFormInputContainer>
-      <S.UserFormInputContainer>
-        <Input
-          type={"text"}
-          label={"Data de Emissão"}
-          mask={"99/99/9999"}
-          hasSeparator
-          onChange={(value) => changeFormData(value, 'dataEmissao')}
-        />
+        {inputs.map((input) => (
+          <Input
+            key={input.id}
+            {...input}
+            onChange={changeFormData}
+          />
+        ))}
         <Select
           label={"Orgão Emissor"}
           data={orgaoEmissorData}
-          onChange={(value) => changeFormData(value, 'orgaoEmissor')}
+          onChange={(e) => changeFormData(e, 'orgaoEmissor')}
         />
       </S.UserFormInputContainer>
       <S.UserFormInputContainer>
-        <UserButtonGender
-          handleClick={(value) => changeFormData(value, 'sexo')}
+        <UserButtonGender handleClick={(e) =>
+          setUser(prev => ({ ...prev, sexo: e }))}
         />
       </S.UserFormInputContainer>
       <S.UserFormInputContainer>
-        <Button width={"250px"} value={"Cadastrar"} />
+        <Button
+          width={"250px"}
+          value={"Cadastrar"}
+        />
       </S.UserFormInputContainer>
     </S.UserFormWrapper>
   )
