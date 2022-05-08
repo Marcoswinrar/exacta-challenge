@@ -18,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const UserFormFieldStyle = css`
-  width: 330px;
   height: 30px;
   background-color: #fffced;
   border-color: black;
