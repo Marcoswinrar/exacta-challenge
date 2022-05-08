@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HomeWrapper = styled.section`
-  width: 90%;
+  width: 95%;
   margin: 4rem auto;
 `
 export const Title = styled.h1`
