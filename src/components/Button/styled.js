@@ -10,9 +10,16 @@ export const ButtonWrapper = styled.button`
   background-color: #fffced; 
   padding: 5px;
   cursor: pointer;
+  box-shadow: 0 1px #999;
+
+  :active {
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
 
   :focus {
-    background-color: #22a6b3;
+    background-color: ${props => props.focusColor && '#22a6b3'};
+    transition: all .3s ease-in-out;
   }
 
   ${media.lessThan("320px")`
