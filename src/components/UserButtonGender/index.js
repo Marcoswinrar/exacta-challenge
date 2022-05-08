@@ -4,8 +4,15 @@ import * as S from './styled'
 const UserButtonGender = ({ handleClick }) => {
   return (
     <S.UserButtonGenderWrapper>
-      <Button value={"Masculino"} onClick={() => handleClick("M")} />
-      <Button value={"Feminino"} onClick={() => handleClick("F")} />
+      <Button
+        focusColor
+        value={"Masculino"}
+        onClick={() => handleClick("M")}
+      />
+      <Button
+        focusColor
+        value={"Feminino"}
+        onClick={() => handleClick("F")} />
     </S.UserButtonGenderWrapper>
   )
 }
