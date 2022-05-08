@@ -8,12 +8,16 @@ export const SelectWrapper = styled.div`
 `
 export const Select = styled.select`
   ${UserFormFieldStyle}
+  width: 336px;
   border: 2px solid black;
-  width: 339px;
   height: 36px;
 
+  :invalid {
+    border-color: red;
+  }
+
   ${media.lessThan("320px")`
-    width: 250px;
+    width: 100%;
   `}
 `
 export const Label = styled.label`

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente <Select/> Deve renderizar o componente sem problemas 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ goEvZo"
+  >
+    <label
+      class="sc-dkzDqf hNEPNr"
+      for="Select"
+    >
+      Select
+    </label>
+    <select
+      class="sc-gsnTZi eXqMhp"
+      id="Select"
+    />
+  </div>
+</div>
+`;
