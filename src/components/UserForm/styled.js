@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const UserFormWrapper = styled.form`
 `
-export const UserFormInputContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,4 +12,11 @@ export const UserFormInputContainer = styled.div`
   ${media.lessThan("large")`
     flex-direction: column;  
   `}
+`
+//Refatorar
+export const Errors = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  color: red;
 `
