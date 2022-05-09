@@ -3,7 +3,7 @@ import * as S from './styled'
 
 const Input = (props) => {
   const [focused, setFocused] = useState(false)
-  const { label, mask, hasSeparator, onChange, ...inputProps } = props
+  const { name, label, mask, hasSeparator, onChange, valid, ...inputProps } = props
   
   return (
     <>

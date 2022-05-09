@@ -10,6 +10,11 @@ export const InputWrapper = styled.div`
   ${media.lessThan("large")`
     width: 100%;
   `}
+
+  .invalid {
+    border-color: red;
+  }
+
 `
 export const Input = styled(InputMask)`
   ${UserFormFieldStyle} 
@@ -17,10 +22,6 @@ export const Input = styled(InputMask)`
   :focus {
     outline: none;
     border-color: blue;
-  }
-
-  :invalid[focused="true"]{
-    border-color: red;
   }
 
 `
