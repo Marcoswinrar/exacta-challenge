@@ -26,7 +26,7 @@ const Form = ({ children, onSubmit, initialValues }) => {
         ...getValues()
       })
     }
-  }, [isSubmitSuccessful, reset])
+  }, [isSubmitSuccessful, reset, setValue])
 
   return (
     <S.Form onSubmit={handleSubmit(onSubmit)}>
