@@ -1,3 +1,18 @@
+export const generoData = [
+  {
+    "value": "",
+    "label": "Selecione"
+  },
+  {
+    "value": "M",
+    "label": "Masculino"
+  },
+  {
+    "value": "F",
+    "label": "Feminino"
+  }
+]
+
 
 export const orgaoEmissorData = [
   {
@@ -85,3 +100,9 @@ export const orgaoEmissorData = [
     "label": "Outros (inclusive exterior)"
   }
 ]
+
+export const getValues = () =>  ({
+  Nome: "",
+  OrgaoEmissor: "",
+  Genero: ""
+})
