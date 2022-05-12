@@ -50,5 +50,5 @@ const UsersProvider = ({ children }) => {
   )
 }
 
-const userContext = () => useContext(UsersContext)
-export { UsersProvider, userContext }
+const useUsersContext = () => useContext(UsersContext)
+export { UsersProvider, useUsersContext }

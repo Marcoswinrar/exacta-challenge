@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { userContext } from '../../contexts/userContext'
+import { useUsersContext } from '../../contexts/userContext'
 import User from '../User'
 import Fetch from '../../utils/fetch'
 import * as S from './styled'
@@ -7,7 +7,7 @@ import * as S from './styled'
 const UserList = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
-  const { users, setUsers } = userContext()
+  const { users, setUsers } = useUsersContext()
 
   const getUsers = useCallback(async () => {
     setLoading(true)
@@ -23,7 +23,7 @@ const UserList = () => {
         }
       })
       .finally(() => setLoading(false))
-  }, [])
+  }, [setUsers])
 
   useEffect(() => {
     getUsers()

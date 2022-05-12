@@ -1,11 +1,11 @@
-import { userContext } from "../../contexts/userContext"
+import { useUsersContext } from "../../contexts/userContext"
 import Button from "../Button"
 import Modal from "../Modal"
 import Fetch from '../../utils/fetch'
 import * as S from './styled'
 
 const DeleteModal = ({ user, onClose }) => {
-  const { removeUser, notify } = userContext()
+  const { removeUser, notify } = useUsersContext()
 
   const handleRemove = async () => {
     await Fetch.delete(`users/${user.id}`)

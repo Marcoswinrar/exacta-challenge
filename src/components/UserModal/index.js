@@ -1,4 +1,4 @@
-import { userContext } from '../../contexts/userContext'
+import { useUsersContext } from '../../contexts/userContext'
 import Modal from '../Modal'
 import Form from '../Form'
 import Button from '../Button'
@@ -7,7 +7,7 @@ import * as S from './styled'
 
 const UserModal = ({ initialValues }) => {
 
-  const { setShowModal, notify, editUser } = userContext()
+  const { setShowModal, notify, editUser } = useUsersContext()
 
   const handleEdit = async (user) => {
     await Fetch.put(`users/${user.id}`, user)

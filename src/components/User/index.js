@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { userContext } from '../../contexts/userContext'
+import { useUsersContext } from '../../contexts/userContext'
 import DeleteModal from '../DeleteModal'
 import * as S from './styled'
 
@@ -7,7 +7,7 @@ const User = ({ user, index }) => {
   const {
     setShowModal,
     setFormDefaultValues
-  } = userContext()
+  } = useUsersContext()
 
   const [showDeleteModal, setShowDeleteModal] = useState(false)
 
