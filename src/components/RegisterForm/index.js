@@ -1,11 +1,11 @@
-import { userContext } from '../../contexts/userContext'
+import { useUsersContext } from '../../contexts/userContext'
 import Form from '../Form'
 import Button from '../Button'
 import Fetch from '../../utils/fetch'
 import * as S from './styled'
 
 const RegisterForm = () => {
-  const { notify } = userContext()
+  const { notify } = useUsersContext()
 
   const handleSubmit = async (user) => {
     await Fetch.post('users', user)
