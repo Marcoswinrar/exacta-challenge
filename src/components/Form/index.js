@@ -49,7 +49,7 @@ const Form = ({ children, onSubmit, initialValues }) => {
             render={({ field }) => (
               <InputMask
                 id={"NumeroRG"}
-                className={errors.NumeroRG && 'invalid'}
+                className={errors.NumeroRg && 'invalid'}
                 mask={"99.999.999-9"}
                 value={field.value ?? ""}
                 inputRef={field.ref}
