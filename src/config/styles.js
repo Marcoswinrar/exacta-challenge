@@ -1,4 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -20,5 +21,18 @@ export const GlobalStyle = createGlobalStyle`
 export const UserFormFieldStyle = css`
   height: 30px;
   background-color: #fffced;
-  border-color: black;
+  border: 2px solid black;
+
+  :focus {
+    outline: none;
+    border-color: #74b9ff;
+  }
+`
+
+export const ActionIconStyle = css`
+  padding: 8px;
+  background-color: #22a6b3;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
 `
