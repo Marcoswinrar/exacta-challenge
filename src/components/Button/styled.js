@@ -6,6 +6,7 @@ export const ButtonWrapper = styled.button`
   border: 2px solid black;
   font-size: 1.2rem;
   font-weight: bold;
+  text-align: center;
   text-transform: uppercase;
   background-color: #fffced; 
   padding: 5px;
