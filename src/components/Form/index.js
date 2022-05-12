@@ -58,7 +58,7 @@ const Form = ({ children, onSubmit, initialValues }) => {
             )}
             rules={{ required: true, validate: (value) => rgValidator(value) }}
           />
-          {errors.DataEmissao && <Error message={"Formato de RG Inválido"} />}
+          {errors.NumeroRg && <Error message={"Formato de RG Inválido"} />}
         </S.InputContainer>
         <S.InputContainer>
           <InputLabel htmlFor='DataEmissao'>Data Emissão:</InputLabel>
