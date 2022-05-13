@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const UserWrapper = styled.section`
   width: 90%;
@@ -7,4 +8,8 @@ export const UserWrapper = styled.section`
 
 export const Title = styled.h1`
   text-transform: uppercase;
+
+  ${media.lessThan("small")`
+    text-align: center;
+  `}
 `

@@ -3,15 +3,16 @@ import media from 'styled-media-query'
 
 export const ButtonWrapper = styled.button`
   width: ${props => props.width ? props.width : '145px'};
-  border: 2px solid black;
   font-size: 1.2rem;
+  border: none;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  background-color: #fffced; 
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
   box-shadow: 0 1px #999;
+  background-color: #22a6b3;
+  color: white;
   
   :active {
     box-shadow: 0 3px #666;

@@ -15,20 +15,23 @@ export const ModalOverlay = styled.div`
 `
 export const ModalHeader = styled.div`
   width: 100%;
-  background-color: #22a6b3;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  color: #22a6b3;
 `
 
 export const ModalBody = styled.div`
   padding: 30px;
+  hr {
+    margin: 0;
+  }
 `
 
 export const ModalContent = styled.div`
-  background-color: #fefefe;
+  background-color: #fffced;
   border: 1px solid #888;
   border-radius: 10px;
   width: 460px; 
@@ -36,7 +39,6 @@ export const ModalContent = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: white;
 
   ${media.lessThan("medium")`
     width: 80%;
@@ -49,8 +51,8 @@ export const ModalContent = styled.div`
 
 export const Title = styled.h2`
   text-transform: uppercase;
-  padding: 20px;
   margin: 0;
+  padding: 30px;
 `
 
 export const Close = styled(MdClose)`

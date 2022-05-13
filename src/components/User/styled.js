@@ -25,12 +25,17 @@ export const UserWrapper = styled.div`
     text-transform: uppercase; 
   }
 
+  text-align: center;
+
   ${media.lessThan("1160px")`
     flex-direction: column;
 
     .column__direction--item {
       width: 100%;
+      text-align: justify;
+      flex-direction: row;
     }
+
   `}
 
   .column__direction--item {
