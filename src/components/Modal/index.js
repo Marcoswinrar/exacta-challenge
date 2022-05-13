@@ -7,6 +7,7 @@ const Modal = ({ children, title, onClose }) => (
         <S.Title>{title}</S.Title>
         <S.Close onClick={onClose} />
       </S.ModalHeader>
+      <hr />
       <S.ModalBody>
         {children}
       </S.ModalBody>
