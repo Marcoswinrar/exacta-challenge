@@ -1,5 +1,4 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react"
-import { act } from "react-dom/test-utils"
 import DeleteModal from ".."
 import { UsersProvider } from "../../../contexts/userContext"
 import Fetch from '../../../utils/fetch'
@@ -9,7 +8,7 @@ describe("Componente <DeleteModal />", () => {
   const onClose = jest.fn()
 
   const user = {
-    id: 1,
+    id: '1',
     Nome: "Marcos"
   }
 

@@ -6,6 +6,6 @@ describe("App", () => {
   it("Deve renderizar o App sem problemas", () => {
     render(<App/>, {wrapper: BrowserRouter})
 
-    expect(screen.queryByText(/exactaworks/))
+    expect(screen.queryByText(/exactaworks/)).toBeInTheDocument()
   })
 })

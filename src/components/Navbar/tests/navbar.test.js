@@ -5,27 +5,20 @@ import Navbar from ".."
 
 describe("Componente <Navbar />", () => {
 
-  const renderComponent = () => render(
-    <Navbar />,
-    { wrapper: BrowserRouter }
-  )
+  beforeEach(() => {
+    render(
+      <Navbar />,
+      { wrapper: BrowserRouter }
+    )
+  })
 
   it("Deve renderizar o componente sem problemas", () => {
-    renderComponent()
 
     expect(screen.getByText(/Cadastro/)).toBeInTheDocument()
     expect(screen.getByText(/Usuários/)).toBeInTheDocument()
   })
 
-  it("Deve renderizar o componente iniciando pela página de Cadastro", () => {
-    renderComponent()
-
-    expect(window.location.pathname).toEqual('/')
-  })
-
   it("Deve redirecionar usuário a página de Cadastro ao clicar em Cadastro", () => {
-    renderComponent()
-
     const link = screen.getByText(/Cadastro/)
 
     act(() => fireEvent.click(link))
@@ -33,9 +26,8 @@ describe("Componente <Navbar />", () => {
     expect(window.location.pathname).toEqual('/')
   })
 
-  it("Deve redirecionar usuário a página de Usuário(Listagem) ao clicar em Usuários", () => {
-    renderComponent()
 
+  it("Deve redirecionar usuário a página de Usuário(Listagem) ao clicar em Usuários", () => {
     const link = screen.getByText(/Usuários/)
 
     act(() => fireEvent.click(link))
