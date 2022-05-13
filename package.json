@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
     "eject": "react-scripts eject",
     "coverage": "react-scripts test --coverage --watchAll"
   },
@@ -38,7 +38,8 @@
       "!**/node_modules/**",
       "!build/**",
       "!src/reportWebVitals.js",
-      "!src/utils/fetch.js"
+      "!src/utils/fetch.js",
+      "!src/index.js"
     ]
   },
   "browserslist": {
