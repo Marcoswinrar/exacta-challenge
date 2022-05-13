@@ -5,7 +5,7 @@ import Fetch from '../../utils/fetch'
 import * as S from './styled'
 
 const RegisterForm = () => {
-  const { notify, formDefaultValues } = useUsersContext()
+  const { notify } = useUsersContext()
 
   const handleSubmit = async (user) => {
     try {
