@@ -33,7 +33,7 @@ const UserList = () => {
     return <S.Loading>Carregando...</S.Loading>
   }
 
-  if(users.length === 0 || error){
+  if (users.length === 0 || error) {
     return <S.Error>Não há usuários cadastrados!</S.Error>
   }
 

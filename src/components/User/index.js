@@ -18,7 +18,7 @@ const User = ({ user, index }) => {
 
   return (
     <>
-      <S.UserWrapper>
+      <S.UserWrapper className="user__wrapper">
         <S.NomeUsuario
           title="Nome do usuário">
           {user.Nome}
