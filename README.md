@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-* App hospedada [aqui](https://exacta-challenge.netlify.app/)
+* App está hospedada [aqui](https://exacta-challenge.netlify.app/)
 
 ## Scripts 
 
@@ -12,6 +12,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * `npm build`
 * `npm eject`
 
-## Sobre
+## Detalhes
 
 * App coberta por testes `npm test` e `npm coverage` para checar a cobertura
