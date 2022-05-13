@@ -37,7 +37,8 @@
       "src/**/*.{js,jsx}",
       "!**/node_modules/**",
       "!build/**",
-      "!src/reportWebVitals.js"
+      "!src/reportWebVitals.js",
+      "!src/utils/fetch.js"
     ]
   },
   "browserslist": {
