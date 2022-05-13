@@ -10,19 +10,21 @@ const UserList = () => {
   const { users, setUsers } = useUsersContext()
 
   const getUsers = useCallback(async () => {
-    setLoading(true)
-    await Fetch.get('users')
-      .then(({ data }) => {
-        setUsers(data)
-      })
-      .catch((error) => {
-        const { response } = error
 
-        if (error && response.status === 404) {
-          setError(true)
-        }
-      })
-      .finally(() => setLoading(false))
+    try {
+      setLoading(true)
+      const { data } = await Fetch.get('users')
+      setUsers(data)
+
+    } catch (error) {
+      if (error.response) {
+        setError(true)
+      }
+      
+    } finally {
+      setLoading(false)
+    }
+
   }, [setUsers])
 
   useEffect(() => {

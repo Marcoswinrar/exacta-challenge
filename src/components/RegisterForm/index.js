@@ -17,7 +17,6 @@ const RegisterForm = () => {
         notify("Houve um erro ao cadastrar!", "error")
       }
     }
-
   }
 
   return (

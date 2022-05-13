@@ -10,22 +10,24 @@ const UserModal = ({ initialValues }) => {
   const { setShowModal, notify, editUser } = useUsersContext()
 
   const handleEdit = async (user) => {
-    await Fetch.put(`users/${user.id}`, user)
-      .then(() => {
-        editUser(user)
-        notify("Usuário atualizado com sucesso!", "success")
-      })
-      .catch(error => {
-        if(error.response) {
-          notify("Erro ao atualizar usuário", "error")
-        }
-      })
-      .finally(() => setShowModal(false))
+    try {
+      await Fetch.put(`users/${user.id}`, user)
+      editUser(user)
+      notify("Usuário atualizado com sucesso!", "success")
+
+    } catch (error) {
+      if (error.response) {
+        notify("Erro ao atualizar usuário!", "error")
+      }
+    }
+    finally {
+      setShowModal(false)
+    }
   }
 
   return (
     <Modal
-      title={"Editar Usuário"}
+      title={"Edição de Usuário"}
       onClose={() => setShowModal(false)}
     >
       <Form

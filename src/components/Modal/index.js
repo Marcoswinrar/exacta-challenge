@@ -5,7 +5,10 @@ const Modal = ({ children, title, onClose }) => (
     <S.ModalContent>
       <S.ModalHeader>
         <S.Title>{title}</S.Title>
-        <S.Close onClick={onClose} />
+        <S.Close
+          title="Fechar"
+          onClick={onClose}
+        />
       </S.ModalHeader>
       <hr />
       <S.ModalBody>

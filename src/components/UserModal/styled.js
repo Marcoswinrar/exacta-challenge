@@ -6,10 +6,9 @@ export const ButtonContainer = styled.div`
 
   ${media.lessThan("small")`
     button {
-      width: 100px;
-      font-size: .7rem;
+      width: 110px;
+      font-size: .8rem;
     }  
-
   `}
 
 `
