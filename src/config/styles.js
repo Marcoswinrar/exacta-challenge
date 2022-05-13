@@ -20,8 +20,10 @@ export const GlobalStyle = createGlobalStyle`
 
 export const UserFormFieldStyle = css`
   height: 30px;
+  padding: 5px;
   background-color: #fffced;
   border: 2px solid black;
+  font-size: .9rem;
 
   :focus {
     outline: none;
