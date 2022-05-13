@@ -17,7 +17,13 @@ describe("Componente <Navbar />", () => {
     expect(screen.getByText(/Usuários/)).toBeInTheDocument()
   })
 
-  it("Deve redirecionar usuário a página de Home(Cadastro) ao clicar em Cadastro", () => {
+  it("Deve renderizar o componente iniciando pela página de Cadastro", () => {
+    renderComponent()
+
+    expect(window.location.pathname).toEqual('/')
+  })
+
+  it("Deve redirecionar usuário a página de Cadastro ao clicar em Cadastro", () => {
     renderComponent()
 
     const link = screen.getByText(/Cadastro/)

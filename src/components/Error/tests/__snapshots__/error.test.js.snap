@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente <Error /> Deve renderizar o component de erro sem problemas 1`] = `
+<div>
+  <span
+    class="sc-bczRLJ dNocsd error"
+  />
+</div>
+`;
