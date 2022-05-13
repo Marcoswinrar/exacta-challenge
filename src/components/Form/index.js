@@ -48,7 +48,7 @@ const Form = ({ children, onSubmit, initialValues }) => {
             control={control}
             render={({ field }) => (
               <InputMask
-                id={"NumeroRG"}
+                id={"NumeroRg"}
                 className={errors.NumeroRg && 'invalid'}
                 mask={"99.999.999-9"}
                 value={field.value ?? ""}
@@ -63,10 +63,12 @@ const Form = ({ children, onSubmit, initialValues }) => {
         <S.InputContainer>
           <InputLabel htmlFor='DataEmissao'>Data Emissão:</InputLabel>
           <Controller
+        
             name="DataEmissao"
             control={control}
             render={({ field }) => (
               <InputMask
+                id="DataEmissao"
                 className={errors.DataEmissao && 'invalid'}
                 mask={"99/99/9999"}
                 value={field.value ?? ""}
@@ -81,6 +83,7 @@ const Form = ({ children, onSubmit, initialValues }) => {
         <S.InputContainer>
           <InputLabel htmlFor='OrgaoEmissor'>Orgão Emissor:</InputLabel>
           <select
+            id='OrgaoEmissor'
             className={errors.OrgaoEmissor && 'invalid'}
             {...register("OrgaoEmissor", { required: true, validate: (value) => selectValidator(value) })}>
             {orgaoEmissorData.map((om, index) => (
@@ -96,6 +99,7 @@ const Form = ({ children, onSubmit, initialValues }) => {
         <S.InputContainer>
           <InputLabel htmlFor="Genero">Gênero:</InputLabel>
           <select
+            id='Genero'
             className={errors.Genero && 'invalid'}
             {...register("Genero", { required: true, validate: (value) => selectValidator(value) })}>
             {generoData.map((genero, index) => (

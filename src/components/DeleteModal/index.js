@@ -8,17 +8,19 @@ const DeleteModal = ({ user, onClose }) => {
   const { removeUser, notify } = useUsersContext()
 
   const handleRemove = async () => {
-    await Fetch.delete(`users/${user.id}`)
-      .then(() => {
-        removeUser(user.id)
-        notify("Usuário excluído com sucesso!", "success")
-      })
-      .catch(error => {
-        if (error.response) {
-          notify("Houve um problema ao excluír", "error")
-        }
-      })
-      .finally(() => onClose())
+    try {
+      await Fetch.delete(`users/${user.id}`)
+      removeUser(user.id)
+      notify("Usuário excluído com sucesso!", "success")
+    
+    } catch (error) {
+      if (error.response) {
+        notify("Houve um problema ao excluír!", "error")
+      }
+    
+    } finally {
+      onClose()
+    }
   }
 
   return (
@@ -31,7 +33,7 @@ const DeleteModal = ({ user, onClose }) => {
         <S.ButtonContainer>
           <Button
             type="submit"
-            value="Excluir"
+            value="Confirmar"
             onClick={() => handleRemove()}
           />
           <Button
