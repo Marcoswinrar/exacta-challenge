@@ -19,7 +19,7 @@ describe("Componente <RegisterForm/>", () => {
 
   it("Deve renderizar o Cadastro sem problemas", () => {
 
-    expect(screen.queryByText(/Cadastrar/))
+    expect(screen.queryByText(/Cadastrar/)).toBeInTheDocument()
     expect(screen.getByRole("button")).toHaveStyle({
       "width": "200px"
     })

@@ -26,8 +26,8 @@ describe("Componente <Form/>", () => {
         fireEvent.submit(botao)
       })
 
-      expect(screen.queryByText(/Nome é Obrigatório/i))
-      expect(screen.queryByText(/Nome Inválido/i))
+      expect(screen.queryByText(/Nome é Obrigatório/i)).toBeInTheDocument()
+      expect(screen.queryByText(/Nome Inválido/i)).toBeInTheDocument()
     })
 
     it("Deve renderizar mensagem de erro para Formato de RG inválido", async () => {
@@ -37,7 +37,7 @@ describe("Componente <Form/>", () => {
         fireEvent.submit(botao)
       })
 
-      expect(screen.queryByText(/Formato do RG Inválido/i))
+      expect(screen.queryByText(/Formato de RG Inválido/i)).toBeInTheDocument()
     })
 
     it("Deve renderizar mensagem de erro para Data inválida", async () => {
@@ -48,7 +48,7 @@ describe("Componente <Form/>", () => {
         fireEvent.submit(botao)
       })
 
-      expect(screen.queryByText(/Formato de Data inválido/i))
+      expect(screen.queryByText(/Formato de Data inválido/i)).toBeInTheDocument()
     })
 
     it("Deve renderizar mensagem de erro para Orgão Emissor Vazio", async () => {
@@ -59,7 +59,7 @@ describe("Componente <Form/>", () => {
         fireEvent.submit(botao)
       })
 
-      expect(screen.queryByText(/Orgão Emissor é Obrigatório/i))
+      expect(screen.queryByText(/Orgão Emissor é Obrigatório/i)).toBeInTheDocument()
     })
 
     it("Deve renderizar mensagem de erro para Gênero não selecionado", async () => {
@@ -70,7 +70,7 @@ describe("Componente <Form/>", () => {
         fireEvent.submit(botao)
       })
 
-      expect(screen.queryByText(/Gênero é Obrigatório/i))
+      expect(screen.queryByText(/Gênero é Obrigatório/i)).toBeInTheDocument()
     })
   })
 
